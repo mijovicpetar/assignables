@@ -32,7 +32,7 @@ This package is helper package for assigning values to SqlAlchemy db model objec
     obj = SomeModel()
     obj.assign(data) # username and email will be assigned.
 
-    obj_dict = obj.get_json_dict() # obj_dict will not contain _sa_instance_state and atributes from Assignable class.
+    obj_dict = obj.get_json_dict() # obj_dict won't contain _sa_instance_state and Assignable class atributes.
 
 Assignable will give your model two new methods:
 1. `assign(data_dict)` - this method will assign coresponding atributes from respective key value pairs from `data_dict`.
