@@ -7,7 +7,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="assignables",
-    version="0.0.1",
+    version="1.0.0",
     author="Petar Mijovic",
     author_email="petar@psoftware.co",
     description="Helper package for assigning values to DB model objects.",
