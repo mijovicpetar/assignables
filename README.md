@@ -6,7 +6,8 @@ Helper package for Flask and Flask-API
 
 ## Introduction ##
 
-This package is helper package for assigning values to SqlAlchemy db model objects and to get their dict representation so they can be sent as response for Flask-API endpoints. This package can be used without using SqlAlchemy, Flask and Flask-API.
+This package is helper package for assigning values to SqlAlchemy db model objects and to get their dict representation so they can be sent as response from Flask-API endpoints.
+This package can be used without using SqlAlchemy, Flask and Flask-API.
 
 ## Installation ##
     pip install assignables
@@ -38,8 +39,8 @@ Assignable will give your model two new methods:
 1. `assign(data_dict)` - this method will assign coresponding atributes from respective key value pairs from `data_dict`.
 2. `get_json_dict()` - this method will return objects dictionary.
 
-Using `assign` method will by default not assign objects `id`, but will other atributes if they exist in `data_dict`.
-Method `get_json_dict` will not have `_sa_instance_state` key inside by default and atriubets Assignable contains.
+Using `assign` method by default will not assign objects `id`, but will other atributes if they exist in `data_dict`.
+Method `get_json_dict` will not have `_sa_instance_state` key inside by default and atriubets Assignable class contains.
 
 If you want to specify custom atributes for not assigning or not serializing you can do that:
     from assignables import Assignables
@@ -98,7 +99,7 @@ If validation failed `ValidationError` exception is raised.
     obj = SomeModel()
     obj.assign(data) # Data will be validate using you custom data validator.
 
-If there is a missmatch between you atribute naming or you wish to specify a naming convetion for
+If there is a missmatch between your atribute naming or you wish to specify a naming convetion for
 resulting dictionary there is a way.
 
     data = {
