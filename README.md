@@ -101,14 +101,14 @@ If validation failed `ValidationError` exception is raised.
 If there is a missmatch between you atribute naming or you wish to specify a naming convetion for
 resulting dictionary there is a way.
 
-data = {
-        "Username": 'user123',
-        "Email": 'user@email.com'
-    }
+    data = {
+            "Username": 'user123',
+            "Email": 'user@email.com'
+        }
 
-obj = SomeModel()
-obj.assign(data, under_score_data=True) # This will handle create snake case keys from data dictionary keys.
-obj_dict = obj.get_json_dict(naming_convetion='camel_case') # Output dict would have camel case keys.
+    obj = SomeModel()
+    obj.assign(data, under_score_data=True) # This will handle create snake case keys from data dictionary keys.
+    obj_dict = obj.get_json_dict(naming_convetion='camel_case') # Output dict would have camel case keys.
 
 Options for `naming_convention` are:
 1. camel_case
